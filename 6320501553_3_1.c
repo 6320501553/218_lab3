@@ -7,9 +7,8 @@ int main()
         for(j=0; j<4; j++)
         {
             scanf("%d",&a[i][j]);
-            s[i]=s[i]+a[i][j];
+            s[i]+=a[i][j];
         }
-        printf("%d\n",s[i]);
     }
     max=s[0];
     for(i=1; i<5; i++)
