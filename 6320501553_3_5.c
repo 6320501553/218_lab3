@@ -28,18 +28,15 @@ int main()
             }
             else
             {
-                for(i=0; i<3; i++)
+                if(m[1]==m[2]||m[2]==m[3]||m[1]==m[3])
                 {
-                    if(m[i]==m[i+1])
-                    {
-                        printf("%d Not is not a Lucky Number\n",k);
-                        break;
-                    }
-                    if(m[i]!=m[i+1])
-                    {
-                        printf("%d is a Lucky Number\n",k);
-                        break;
-                    }
+                    printf("%d Not is not a Lucky Number\n",k);
+                    break;
+                }
+                if(m[1]!=m[2]&&m[2]!=m[3]&&m[1]!=m[3])
+                {
+                    printf("%d is a Lucky Number\n",k);
+                    break;
                 }
             }
         }
