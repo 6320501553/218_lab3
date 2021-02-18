@@ -3,7 +3,7 @@ int main()
 {
     int n,i,j;
     scanf("%d",&n);
-    int m[n],k=n;
+    int m[n],k=n,sum;
     for(i=0; i<n+1; i++)
     {
         for(j=2; j<n+1; j++)
@@ -16,17 +16,32 @@ int main()
         }
         n=n/j;
     }
-    for(i=0; i<3; i++)
+    for(i=0; i<n; i++)
     {
-        if(m[i]==m[i+1])
+        if(m[i]!=0)
         {
-            printf("%d Not is not a Lucky Number\n",k);
-            break;
-        }
-        if(m[i]!=m[i+1])
-        {
-            printf("%d is a Lucky Number\n",k);
-            break;
+            sum++;
+            if(sum>3)
+            {
+                printf("%d Not is not a Lucky Number\n",k);
+                break;
+            }
+            else
+            {
+                for(i=0; i<3; i++)
+                {
+                    if(m[i]==m[i+1])
+                    {
+                        printf("%d Not is not a Lucky Number\n",k);
+                        break;
+                    }
+                    if(m[i]!=m[i+1])
+                    {
+                        printf("%d is a Lucky Number\n",k);
+                        break;
+                    }
+                }
+            }
         }
     }
     return 0;
